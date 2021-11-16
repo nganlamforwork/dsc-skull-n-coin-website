@@ -97,7 +97,7 @@ export default function SimpleTab() {
             <TabPanel value={value} index={pdf.id} className={classes.item}>
                 <embed className={classes.pdfItem} 
                     type="application/pdf" 
-                    src={pdf.src}>
+                    src={`${pdf.src}#toolbar=0`}>
                 </embed>
             </TabPanel>
         ))}
