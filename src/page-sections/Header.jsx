@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import clsx from 'clsx';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 
@@ -11,9 +11,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import IconButton from '@material-ui/core/IconButton';
 import ListItem from '@material-ui/core/ListItem';
 import ClearIcon from '@material-ui/icons/Clear';
-import ListItemText from '@material-ui/core/ListItemText';
 //logo
-import logo from ".././img/dsc-logo.png"
 const drawerWidth = 240;
 const useStyles = makeStyles(theme =>({
     root:{
@@ -29,7 +27,7 @@ const useStyles = makeStyles(theme =>({
         display:"flex",
         justifyContent: "space-between",
         alignItems: "center",
-        margin: "10px 8%",
+        margin: "0px 8%",
         [theme.breakpoints.down("md")]: {
             margin: "10px 5%",
         },
@@ -39,42 +37,27 @@ const useStyles = makeStyles(theme =>({
         alignItems: "center"
     },
     logo:{
-        "& img":{
-            height: 56,
-            [theme.breakpoints.down("sm")]: {
-                height: 40,
-            },
+        "& h1":{
+            fontWeight: 700
         }
+    },
+    red:{
+        color: "#ba000d"
     },
     links:{
         "& a":{
             textDecoration: "none",
             color: "white",
             margin: "20px",
-            fontSize: "18px"
+            fontSize: "18px",
+            fontWeight: 700,
+            transition: "0.4s ease-in-out",
+            "&:hover":{
+                color:"#757de8"
+            },
         },
         marginRight: "60px"
     },
-    startButton:{
-        backgroundColor: "#F9DB01 !important",
-        color: "black !important",
-        borderRadius: "26px !important",
-        minWidth: "140px !important",
-        padding: "8px 22px !important",
-        height: "40px !important",
-        textTransform: "none !important",
-        fontSize: "16px !important",
-        "&:hover": {
-            backgroundColor: "#F9DB01 !important",
-            color: "black !important",
-        },
-        [theme.breakpoints.down("sm")]: {
-          fontSize: "15px !important",
-          padding: "6px 20px !important",
-          minWidth: "110px !important"
-        },
-    },
-
 
     hide: {
         display: 'none',
@@ -107,6 +90,22 @@ export default function Header() {
     const classes = useStyles();
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
+    const [show,setShow] = React.useState(true);
+    
+    const controlNavbar = () => {
+        if (window.scrollY>250){
+            setShow(true);
+        }else{
+            setShow(false);
+        }
+    }
+    
+    useEffect(()=>{
+        window.addEventListener('scroll',controlNavbar);
+        return () => {
+            window.addEventListener('scroll',controlNavbar);
+        }
+    },[])
 
     const handleDrawerOpen = () => {
         setOpen(true);
@@ -116,9 +115,11 @@ export default function Header() {
         setOpen(false);
     };
     return (
-    <div className={classes.root}>
+    <div className={`${classes.root} ${show && 'active'}`}>
         <div className={classes.navbarContainer}>
-            <div className={classes.logo}><img src={logo} alt="logo"/></div>
+            <div className={classes.logo}>
+                <h1>D<span className={classes.red}>S</span>C</h1>
+            </div>
             <Hidden only={['xs', 'sm']}>
                 <div className={classes.navbarContent}>
                     <div className={classes.links}>

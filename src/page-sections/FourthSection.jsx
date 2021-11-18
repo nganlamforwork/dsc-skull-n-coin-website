@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import DocumentTab from './components/DocumentTab.jsx';
+import DemoCarousel from './components/Carousel'
 
 const useStyles = makeStyles(theme =>({
     root:{
@@ -9,23 +9,15 @@ const useStyles = makeStyles(theme =>({
         overflowX: "hidden",
         overflowY: "hidden",
         textAlign: "center",
-        paddingTop: "6%",
-        paddingBottom: "10%"
+        paddingTop: "3%",
     },
     mainHeader:{
         fontSize: 52,
         letterSpacing: "0.2px",
-        marginBottom: 14
-    },
-    subHeader:{
-        fontSize: 20,
-        lineHeight: "30px",
-        fontWeight: "lighter",
-        margin: "0 30%",
-        marginBottom: "6%"
+        marginBottom: "3%"
     },
     gallery:{
-        margin: "auto 20%",
+        margin: "auto 25%",
         color: "black"
     }
 }));
@@ -35,13 +27,10 @@ export default function FourthSection() {
     const theme = useTheme();
 
     return (
-    <div className={classes.root} id="document">
-        <div className={classes.Header}>
-            <h1 className={classes.mainHeader} >DOCUMENT</h1>
-            <h4 className={classes.subHeader}>Biên bản họp nhóm, phân công,...</h4>
-        </div>
+    <div className={classes.root}>
+        <h1 className={classes.mainHeader} >TUTORIAL</h1>
         <div className={classes.gallery}>
-            <DocumentTab />
+            <DemoCarousel />
         </div>
     </div>
     )

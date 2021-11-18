@@ -7,11 +7,7 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 
-import tutorial from '../.././documents/Game Tutorial.pdf';
-import linkGithub from '../.././documents/Link github.pdf';
 import meetingMinutes from '../.././documents/Meeting Minutes_Week 1.pdf';
-import projectPlan from '../.././documents/Project Plan.pdf';
-import rule from '../.././documents/Skull n Coin Rule.pdf';
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -68,7 +64,7 @@ const useStyles = makeStyles((theme) => ({
         height: "800px"
     }
 }));
-export default function SimpleTab() {
+export default function DocumentTab() {
     const classes = useStyles();
     const [value, setValue] = React.useState(0);
 
@@ -86,6 +82,7 @@ export default function SimpleTab() {
             indicatorColor="primary"
             scrollButtons="auto"
             aria-label="scrollable auto tabs example"
+            centered
             className={classes.titleBar}
             >
             {gallery.map(img => (
@@ -97,7 +94,7 @@ export default function SimpleTab() {
             <TabPanel value={value} index={pdf.id} className={classes.item}>
                 <embed className={classes.pdfItem} 
                     type="application/pdf" 
-                    src={pdf.src}>
+                    src={`${pdf.src}#toolbar=0`}>
                 </embed>
             </TabPanel>
         ))}
@@ -109,42 +106,22 @@ export default function SimpleTab() {
 const gallery = [
     {
         id: 0,
-        title: "Tutorial",
-        src: tutorial,
+        title: "Biên bản họp lần 1",
+        src: meetingMinutes,
     },
     {
         id: 1,
-        title: "Github",
-        src: linkGithub,
+        title: "Biên bản họp lần 2",
+        src: meetingMinutes,
     },
     {
         id: 2,
-        title: "Bien ban hop",
+        title: "Biên bản họp lần 3",
         src: meetingMinutes,
     },
     {
         id: 3,
-        title: "Bien ban hop 2",
+        title: "Biên bản họp lần 4",
         src: meetingMinutes,
-    },
-    {
-        id: 4,
-        title: "Bien ban hop 3",
-        src: meetingMinutes,
-    },
-    {
-        id: 5,
-        title: "Bien ban hop 4",
-        src: meetingMinutes,
-    },
-    {
-        id: 6,
-        title: "Project plan",
-        src: projectPlan,
-    },
-    {
-        id: 7,
-        title: "Game rule",
-        src: rule,
     },
 ]

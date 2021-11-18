@@ -21,10 +21,10 @@ const useStyles = makeStyles(theme =>({
         overflowX: "hidden",
         overflowY: "hidden",
         textAlign: "center",
-        paddingTop: "6%"
+        paddingTop: "8%"
     },
     mainHeader:{
-        fontSize: 52,
+        fontSize: 60,
         letterSpacing: "0.2px",
         marginBottom: 14
     },
@@ -40,14 +40,19 @@ const useStyles = makeStyles(theme =>({
     },
     cardItem: {
         padding:"12% 5%",
-        borderRadius: 30,
+        borderRadius: 20,
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
+        transition: "0.4s ease-in-out",
         "& p":{
             margin:10
         },
+        "&:hover":{
+            transform: "translateY(-20px)",
+            boxShadow: "0 20px 60px rgba(255, 255, 255, 0.3)"
+        }
     },
     large: {
         width: theme.spacing(20),
@@ -67,6 +72,7 @@ const useStyles = makeStyles(theme =>({
         padding: "10px 30px !important",
         textTransform: "none !important",
         fontSize: "16px !important",
+        fontFamily: " 'Quicksand', sans-serif",
         transition: ".4s ease-in-out",
         "&:hover": {
             backgroundColor: "#181818 !important",
@@ -91,14 +97,15 @@ export default function SecondSection() {
             <h4 className={classes.subHeader}>Mô tả sơ lược về thông tin cá nhân cũng như các hoạt động công việc của từng thành viên trong nhóm</h4>
         </div>
         <div  className={classes.gridContainer}>
-            <Grid container spacing={5}>
+            <Grid container spacing={6}>
                 {infos.map(info => (
-                    <Grid item className={classes.gridItem} key={info.id} xs={12} md={4} >
+                    <Grid item className={classes.gridItem} key={info.id} xs={12} sm={6} md={4} >
                         <Card className={classes.cardItem}>
                             <Avatar alt="avatar" src={info.source} className={classes.large} />
                             <h2> {info.name}</h2>
                             <p><strong>MSSV:</strong> {info.mssv}</p>
                             <p><strong>Ngày sinh:</strong> {info.dateOfBirth}</p>
+                            <p><strong>Tính cách:</strong> {info.personality}</p>
                             <p><strong>Công việc:</strong> {info.task}</p>
                             <Button className={classes.readMoreButton}>Read More</Button>
                         </Card>
@@ -119,7 +126,8 @@ const infos=[
         name: "Trần Bình Kha",
         dateOfBirth: "21/04/2003",
         mssv: "21127334",
-        task: "Leader"
+        task: "Leader",
+        personality: "C"
     },
     {
         id:2,
@@ -127,7 +135,8 @@ const infos=[
         name: "Trần Tùng Lâm",
         dateOfBirth: "21/04/2003",
         mssv: "21127334",
-        task: "Game Developer"
+        task: "Game Developer",
+        personality: "C"
     },
     {
         id:3,
@@ -135,7 +144,8 @@ const infos=[
         name: "Bùi Nguyễn Nhật Minh",
         dateOfBirth: "21/04/2003",
         mssv: "21127334",
-        task: "Game Developer"
+        task: "Game Developer",
+        personality: "C"
     },
 
     {
@@ -144,7 +154,8 @@ const infos=[
         name: "Huỳnh Hiệp Phát",
         dateOfBirth: "21/04/2003",
         mssv: "21127334",
-        task: "Game Developer"
+        task: "Game Developer",
+        personality: "C"
     },
     {
         id:5,
@@ -152,7 +163,8 @@ const infos=[
         name: "Nguyễn Hồng Hạnh",
         dateOfBirth: "21/04/2003",
         mssv: "21127334",
-        task: "Designer"
+        task: "Designer",
+        personality: "C"
     },
     {
         id:6,
@@ -160,6 +172,7 @@ const infos=[
         name: "Lê Vũ Ngân Lam",
         dateOfBirth: "21/04/2003",
         mssv: "21127334",
-        task: "Designer"
+        task: "Designer",
+        personality: "C"
     },
 ]

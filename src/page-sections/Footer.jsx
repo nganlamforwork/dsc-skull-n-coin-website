@@ -19,7 +19,7 @@ export default function FourthSection() {
 
     return (
     <div className={classes.root} id="document">
-        <div className={classes.Header}>
+        <div className={classes.Headechr}>
             <h1 className={classes.mainHeader} >FOOTER HERE</h1>
             <h4 className={classes.subHeader}>footer here</h4>
         </div>

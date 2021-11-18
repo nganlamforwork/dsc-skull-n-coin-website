@@ -1,7 +1,6 @@
 import React from "react";
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import SimpleTab from './components/SimpleTab.jsx';
-
+import DocumentTab from './components/DocumentTab.jsx';
 
 const useStyles = makeStyles(theme =>({
     root:{
@@ -11,6 +10,7 @@ const useStyles = makeStyles(theme =>({
         overflowY: "hidden",
         textAlign: "center",
         paddingTop: "8%",
+        paddingBottom: "10%"
     },
     mainHeader:{
         fontSize: 52,
@@ -30,17 +30,19 @@ const useStyles = makeStyles(theme =>({
     }
 }));
 
-export default function ThirdSection() {
+export default function FifthSection() {
     const classes = useStyles();
     const theme = useTheme();
 
     return (
-    <div className={classes.root} id="project">
+    <div className={classes.root} id="document">
         <div className={classes.Header}>
-            <h1 className={classes.mainHeader} >PROJECT</h1>
-            <h4 className={classes.subHeader}>Skull n Coin Game</h4>
+            <h1 className={classes.mainHeader} >DOCUMENT</h1>
+            <h4 className={classes.subHeader}>Biên bản họp nhóm, phân công,...</h4>
         </div>
-        <p>Day la 1 cai game rat la dep, tri tue va nhan pham .v.v (mo ta so luoc ve game here)</p>
+        <div className={classes.gallery}>
+            <DocumentTab />
+        </div>
     </div>
     )
 }

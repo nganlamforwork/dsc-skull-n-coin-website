@@ -2,35 +2,41 @@ import React from "react";
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import screens from ".././img/screens.png";
-
+import title from ".././img/title.svg";
 const useStyles = makeStyles(theme =>({
     root:{
         width: "100%",
         overflowX: "hidden",
         overflowY: "hidden",
         textAlign: "center",
-        marginTop: "10%"
+        marginTop: "12%"
     },
-    mainHeader:{
-        fontWeight: 500,
-        fontSize: 80,
-        lineHeight: "88px",
-        letterSpacing: "0.2px"
+    mainHeader:{        
+        "& h1":{
+            fontSize: 80,
+            fontWeight: 900,
+            letterSpacing: "0.2px",
+            marginTop: 0
+        },
+        "& img":{
+            width:"60%"
+        }
     },
     subHeader:{
-        fontSize: 20,
-        lineHeight: "30px",
-        fontWeight: "normal"
+        fontSize: 24,
+        lineHeight: "40px",
+        fontWeight: 500
     },
     startButton:{
-        marginTop:"4%",
+        marginTop:"3%",
         backgroundColor: "#181818 !important",
         color: "white !important",
         borderRadius: "0px !important",
         border: "1px solid white",
         padding: "14px 40px !important",
         textTransform: "none !important",
-        fontSize: "16px !important",
+        fontSize: "18px !important",
+        fontFamily: " 'Quicksand', sans-serif",
         "&:hover": {
             backgroundColor: "white !important",
             color: "#181818 !important",
@@ -42,10 +48,13 @@ const useStyles = makeStyles(theme =>({
         },
     },
     screenImg:{
-        marginTop: "3%",
+        marginTop: "7%",
         "& img":{
             width:"100%"
         }
+    },
+    links:{
+        textDecoration: "none"
     }
 }));
 
@@ -55,10 +64,14 @@ export default function FirstSection() {
 
     return (
     <div className={classes.root}>
-        <h1 className={classes.mainHeader}>SKULL N COIN <br/> GAME</h1>
+        <div className={classes.mainHeader}>
+            <img src={title} alt="Skull n Coin" />
+        </div>
         <h4 className={classes.subHeader}>DSC TEAM FROM 21CLC08 <br/> HO CHI MINH UNIVERISITY OF SCIENCE</h4>
         
-        <Button className={classes.startButton}>Learn More</Button>
+        <a className={classes.links} href="#members">
+            <Button className={classes.startButton}>Learn More</Button>
+        </a>
         <div className={classes.screenImg}><img src={screens} alt="screenImg"/></div>
     </div>
     )
