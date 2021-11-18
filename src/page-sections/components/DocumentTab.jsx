@@ -124,4 +124,14 @@ const gallery = [
         title: "Biên bản họp lần 4",
         src: meetingMinutes,
     },
+    {
+        id: 6,
+        title: "Project plan",
+        src: projectPlan,
+    },
+    {
+        id: 7,
+        title: "Game rule",
+        src: rule,
+    },
 ]
