@@ -6,6 +6,7 @@ import ThirdSection from './page-sections/ThirdSection';
 import FourthSection from './page-sections/FourthSection';
 import FifthSection from './page-sections/FifthSection';
 import Footer from './page-sections/Footer';
+import SixthSection from './page-sections/SixthSection';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <ThirdSection />
       <FourthSection />
       <FifthSection />
+      <SixthSection />
       <Footer />
     </div>
   );

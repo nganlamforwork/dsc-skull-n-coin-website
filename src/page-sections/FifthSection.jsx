@@ -10,7 +10,6 @@ const useStyles = makeStyles(theme =>({
         overflowY: "hidden",
         textAlign: "center",
         paddingTop: "8%",
-        paddingBottom: "10%"
     },
     mainHeader:{
         fontSize: 60,

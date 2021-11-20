@@ -42,6 +42,11 @@ const useStyles = makeStyles(theme =>({
     gridContainer:{
         margin: "50px 10%"
     },
+    gridItem:{
+        display:"flex",
+        flexDirection:"column",
+        flexGrow:1,
+    },
     cardItem: {
         padding:"12% 5%",
         borderRadius: 16,
@@ -53,6 +58,7 @@ const useStyles = makeStyles(theme =>({
         transition: "0.4s ease-in-out",
         backgroundColor:"#181818",
         color:"white",
+        height: "100%",
         "& p":{
             margin:7
         },
