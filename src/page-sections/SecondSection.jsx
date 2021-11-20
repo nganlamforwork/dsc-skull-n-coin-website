@@ -52,6 +52,12 @@ const useStyles = makeStyles(theme =>({
         "&:hover":{
             transform: "translateY(-20px)",
             boxShadow: "0 20px 60px rgba(255, 255, 255, 0.3)"
+        },
+        "& h2":{
+            marginBottom: 0
+        },
+        "& h3":{
+            marginTop: "2%"
         }
     },
     large: {
@@ -103,10 +109,11 @@ export default function SecondSection() {
                         <Card className={classes.cardItem}>
                             <Avatar alt="avatar" src={info.source} className={classes.large} />
                             <h2> {info.name}</h2>
-                            <p><strong>MSSV:</strong> {info.mssv}</p>
-                            <p><strong>Ngày sinh:</strong> {info.dateOfBirth}</p>
-                            <p><strong>Tính cách:</strong> {info.personality}</p>
-                            <p><strong>Công việc:</strong> {info.task}</p>
+                            <h3>{info.role}</h3>
+                            <p><strong>Student ID:</strong> {info.mssv}</p>
+                            <p><strong>Date of birth:</strong> {info.dateOfBirth}</p>
+                            <p><strong>Personality:</strong> {info.personality}</p>
+                            <p><strong>Position in project:<br/></strong> {info.task}</p>
                             <Button className={classes.readMoreButton}>Read More</Button>
                         </Card>
                     </Grid>
@@ -124,55 +131,61 @@ const infos=[
         id:1,
         source: tbk,
         name: "Trần Bình Kha",
-        dateOfBirth: "21/04/2003",
-        mssv: "21127334",
-        task: "Leader",
-        personality: "C"
+        role: "Leader",
+        dateOfBirth: "16/09/2003",
+        mssv: "21127065",
+        task: "Game Developer",
+        personality: "D"
     },
     {
         id:2,
         source: ttl,
+        role: "Member",
         name: "Trần Tùng Lâm",
-        dateOfBirth: "21/04/2003",
-        mssv: "21127334",
+        dateOfBirth: "26/02/2003",
+        mssv: "21127337",
         task: "Game Developer",
-        personality: "C"
+        personality: "D"
     },
     {
         id:3,
         source: bnnm,
+        role: "Member",
         name: "Bùi Nguyễn Nhật Minh",
-        dateOfBirth: "21/04/2003",
-        mssv: "21127334",
-        task: "Game Developer",
-        personality: "C"
+        dateOfBirth: "09/11/2003",
+        mssv: "21127105",
+        task: "Video Creator - Web Developer",
+        personality: "S"
     },
 
     {
         id:4,
         source: hhp,
+        role: "Member",
         name: "Huỳnh Hiệp Phát",
-        dateOfBirth: "21/04/2003",
-        mssv: "21127334",
+        dateOfBirth: "31/01/2003",
+        mssv: "21127130",
         task: "Game Developer",
         personality: "C"
     },
     {
         id:5,
         source: nhh,
+        role: "Member",
         name: "Nguyễn Hồng Hạnh",
-        dateOfBirth: "21/04/2003",
-        mssv: "21127334",
-        task: "Designer",
-        personality: "C"
+        dateOfBirth: "19/10/2003",
+        mssv: "21127503",
+        task: "Secretary",
+        personality: "D"
     },
     {
         id:6,
         source: lvnl,
+        role: "Member",
         name: "Lê Vũ Ngân Lam",
         dateOfBirth: "21/04/2003",
         mssv: "21127334",
-        task: "Designer",
+        task: "Designer -Web Developer",
         personality: "C"
     },
 ]
