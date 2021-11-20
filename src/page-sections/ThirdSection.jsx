@@ -12,6 +12,12 @@ const useStyles = makeStyles(theme =>({
         overflowY: "hidden",
         textAlign: "center",
         paddingTop: "10%",
+        [theme.breakpoints.down("sm")]: {
+            paddingTop: "15%",
+        },
+        [theme.breakpoints.down("xs")]: {
+            paddingTop: "25%",
+        },
     },
     overview:{
         display: "flex",
@@ -21,12 +27,20 @@ const useStyles = makeStyles(theme =>({
         maxWidth: "40%",
         "& img":{
             width:"70%"
-        }
+        },
+        [theme.breakpoints.down("sm")]: {
+            display: "none"
+        },
     },
     content:{
         marginRight:"5%",
         maxWidth: "60%",
         textAlign:"left",
+        [theme.breakpoints.down("sm")]: {
+            maxWidth: "100%",
+            margin: "auto 8%",
+            textAlign: "center"
+        },
         "& span":{
             fontSize: "1.7rem",
             color:"#757de8"
@@ -50,6 +64,11 @@ const useStyles = makeStyles(theme =>({
         "& h2":{
             margin: "0 0 0 18px"
         }
+    },
+    gridItem:{
+        [theme.breakpoints.down("sm")]: {
+            textAlign: "left"
+        },
     }
 }));
 
@@ -68,7 +87,7 @@ export default function ThirdSection() {
                 <h2>SUPER RELAXING GAME</h2>
                 <Grid container spacing={3}>
                     {infos.map(info => (
-                        <Grid item className={classes.gridItem} key={info.id} xs={12} md={6} >
+                        <Grid item className={classes.gridItem} key={info.id} xs={12} sm={6}>
                             <div className={classes.subtitle}>
                                 <DoneOutlineIcon style={{color:"#757de8"}}/> 
                                 <h2>{info.title}</h2>

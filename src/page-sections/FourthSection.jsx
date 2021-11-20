@@ -10,6 +10,9 @@ const useStyles = makeStyles(theme =>({
         overflowY: "hidden",
         textAlign: "center",
         paddingTop: "3%",
+        [theme.breakpoints.down("xs")]: {
+            paddingTop: "25%",
+        },
     },
     mainHeader:{
         fontSize: 52,
@@ -18,7 +21,13 @@ const useStyles = makeStyles(theme =>({
     },
     gallery:{
         margin: "auto 20%",
-        color: "black"
+        color: "black",
+        [theme.breakpoints.down("sm")]: {
+            margin: "auto 6%",
+        },
+        [theme.breakpoints.down("xs")]: {
+            margin: "auto 3%",
+        },
     }
 }));
 

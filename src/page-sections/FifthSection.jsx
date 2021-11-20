@@ -10,6 +10,9 @@ const useStyles = makeStyles(theme =>({
         overflowY: "hidden",
         textAlign: "center",
         paddingTop: "8%",
+        [theme.breakpoints.down("xs")]: {
+            paddingTop: "20%",
+        },
     },
     mainHeader:{
         fontSize: 60,
@@ -21,11 +24,23 @@ const useStyles = makeStyles(theme =>({
         lineHeight: "30px",
         fontWeight: "lighter",
         margin: "0 30%",
-        marginBottom: "6%"
+        marginBottom: "6%",
+        [theme.breakpoints.down("sm")]: {
+            margin: "5% 20%",
+        },
+        [theme.breakpoints.down("xs")]: {
+            margin: "5% 10%",
+        },
     },
     gallery:{
         margin: "auto 20%",
-        color: "black"
+        color: "black",
+        [theme.breakpoints.down("sm")]: {
+            margin: "auto 6%",
+        },
+        [theme.breakpoints.down("xs")]: {
+            margin: "auto 4%",
+        },
     }
 }));
 

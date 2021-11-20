@@ -25,12 +25,21 @@ const useStyles = makeStyles(theme =>({
         overflowX: "hidden",
         overflowY: "hidden",
         textAlign: "center",
-        paddingTop: "10%"
+        paddingTop: "10%",
+        [theme.breakpoints.down("sm")]: {
+            paddingTop: "15%",
+        },
+        [theme.breakpoints.down("xs")]: {
+            paddingTop: "25%",
+        },
     },
     mainHeader:{
         fontSize: 60,
         letterSpacing: "0.2px",
-        marginBottom: 14
+        marginBottom: 14,
+        [theme.breakpoints.down("sm")]: {
+            marginTop:20
+        },
     },
     subHeader:{
         fontSize: 20,
@@ -40,7 +49,13 @@ const useStyles = makeStyles(theme =>({
         marginBottom: "6%"
     },
     gridContainer:{
-        margin: "50px 10%"
+        margin: "50px 10%",
+        [theme.breakpoints.down("sm")]: {
+            margin: "30px 5%",
+        },
+        [theme.breakpoints.down("xs")]: {
+            margin: "30px 8%",
+        },
     },
     gridItem:{
         display:"flex",
@@ -59,6 +74,9 @@ const useStyles = makeStyles(theme =>({
         backgroundColor:"#181818",
         color:"white",
         height: "100%",
+        [theme.breakpoints.down("sm")]: {
+            padding: "10% 3%"
+        },
         "& p":{
             margin:7
         },
@@ -71,7 +89,7 @@ const useStyles = makeStyles(theme =>({
         },
         "& h3":{
             marginTop: "2%"
-        }
+        },
     },
     large: {
         width: theme.spacing(20),
@@ -98,25 +116,38 @@ const useStyles = makeStyles(theme =>({
     image:{
         maxWidth: "50%",
         "& img":{
-            width:"70%"
-        }
+            width:"70%",
+        },
+        [theme.breakpoints.down("sm")]: {
+            display: "none"
+        },
     },
     content:{
         marginRight:"5%",
         maxWidth: "60%",
         textAlign:"left",
+        [theme.breakpoints.down("sm")]: {
+            maxWidth: "100%",
+            margin: "auto 8%",
+            textAlign: "center"
+        },
         "& span":{
             fontSize: "1.7rem",
             color:"#757de8"
         },
         "& h3":{
             fontSize:60,
-            margin:"3% 0"
+            margin:"3% 0",
+            
         },
         "& p":{
             fontSize:"1.15rem",
-            lineHeight: "1.7rem"
-        }
+            lineHeight: "1.7rem",
+            [theme.breakpoints.down("sm")]: {
+                fontSize:"1rem",
+                lineHeight: "1.2rem",
+            },
+        },
     }
 }));
 

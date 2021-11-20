@@ -12,7 +12,10 @@ const useStyles = makeStyles(theme =>({
         overflowY: "hidden",
         textAlign: "center",
         paddingTop: "8%",
-        paddingBottom: "10%"
+        paddingBottom: "10%",
+        [theme.breakpoints.down("xs")]: {
+            paddingTop: "20%",
+        },
     },
     mainHeader:{
         fontSize: 60,
@@ -20,7 +23,13 @@ const useStyles = makeStyles(theme =>({
         marginBottom: 14
     },
     gridContainer:{
-        margin:"5% 10%"
+        margin:"5% 10%",
+        [theme.breakpoints.down("sm")]: {
+            margin: "5% 25%",
+        },
+        [theme.breakpoints.down("xs")]: {
+            margin: "5% 10%",
+        },
     },
     cardItem: {
         borderRadius: 16,
@@ -74,8 +83,8 @@ const useStyles = makeStyles(theme =>({
             color: "#181818 !important",
         },
         [theme.breakpoints.down("sm")]: {
-          fontSize: "15px !important",
-          padding: "6px 20px !important",
+          fontSize: "18px !important",
+          padding: "10px 22px !important",
           minWidth: "110px !important"
         },
     },
