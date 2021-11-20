@@ -9,17 +9,29 @@ const useStyles = makeStyles(theme =>({
         overflowX: "hidden",
         overflowY: "hidden",
         textAlign: "center",
-        marginTop: "12%"
+        marginTop: "12%",
+        [theme.breakpoints.down("sm")]: {
+            marginTop: "18%",
+        },
+        [theme.breakpoints.down("xs")]: {
+            paddingTop: "20%",
+        },
     },
     mainHeader:{        
         "& h1":{
             fontSize: 80,
             fontWeight: 900,
             letterSpacing: "0.2px",
-            marginTop: 0
+            marginTop: 0,
+            [theme.breakpoints.down("sm")]: {
+                fontSize: 70,
+            },
         },
         "& img":{
-            width:"60%"
+            width:"60%",
+            [theme.breakpoints.down("sm")]: {
+                width: "70%",
+            },
         }
     },
     subHeader:{
@@ -43,8 +55,7 @@ const useStyles = makeStyles(theme =>({
         },
         [theme.breakpoints.down("sm")]: {
           fontSize: "15px !important",
-          padding: "6px 20px !important",
-          minWidth: "110px !important"
+          padding: "8px 30px !important",
         },
     },
     screenImg:{
@@ -69,7 +80,7 @@ export default function FirstSection() {
         </div>
         <h4 className={classes.subHeader}>DSC TEAM FROM 21CLC08 <br/> HO CHI MINH UNIVERISITY OF SCIENCE</h4>
         
-        <a className={classes.links} href="#members">
+        <a className={classes.links} href="#about">
             <Button className={classes.startButton}>Learn More</Button>
         </a>
         <div className={classes.screenImg}><img src={screens} alt="screenImg"/></div>

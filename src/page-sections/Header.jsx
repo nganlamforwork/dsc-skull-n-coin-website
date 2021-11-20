@@ -29,7 +29,7 @@ const useStyles = makeStyles(theme =>({
         alignItems: "center",
         margin: "0px 8%",
         [theme.breakpoints.down("md")]: {
-            margin: "10px 5%",
+            margin: "0 5%",
         },
     },
     navbarContent:{

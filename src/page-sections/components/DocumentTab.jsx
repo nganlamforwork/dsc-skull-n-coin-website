@@ -7,7 +7,9 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 
-import meetingMinutes from '../.././documents/Meeting Minutes_Week 1.pdf';
+import projectPlan from '../.././documents/Project Plan.pdf';
+import meeting1 from '../.././documents/Meeting Minutes_1.pdf';
+import meeting2 from '../.././documents/Meeting Minutes_2.pdf';
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -94,7 +96,7 @@ export default function DocumentTab() {
             <TabPanel value={value} index={pdf.id} className={classes.item}>
                 <embed className={classes.pdfItem} 
                     type="application/pdf" 
-                    src={`${pdf.src}#toolbar=0`}>
+                    src={`${pdf.src}`}>
                 </embed>
             </TabPanel>
         ))}
@@ -107,21 +109,26 @@ const gallery = [
     {
         id: 0,
         title: "Bảng kế hoạch đô án",
-        src: meetingMinutes,
+        src: projectPlan,
     },
     {
         id: 1,
         title: "Biên bản họp lần 1",
-        src: meetingMinutes,
+        src: meeting1,
     },
     {
         id: 2,
         title: "Biên bản họp lần 2",
-        src: meetingMinutes,
+        src: meeting2,
     },
     {
         id: 3,
         title: "Biên bản họp lần 3",
-        src: meetingMinutes,
+        src: meeting2,
+    },
+    {
+        id: 4,
+        title: "Biên bản họp lần 4",
+        src: meeting2,
     },
 ]
