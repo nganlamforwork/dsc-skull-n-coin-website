@@ -183,7 +183,7 @@ const navLinks = [
         url: "/#project"
     },
     {
-        title: "Document",
+        title: "Documents",
         url: "/#document"
     },
     {
