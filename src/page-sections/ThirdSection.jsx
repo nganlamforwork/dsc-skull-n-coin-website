@@ -13,7 +13,7 @@ const useStyles = makeStyles(theme =>({
         paddingTop: "8%",
     },
     mainHeader:{
-        fontSize: 52,
+        fontSize: 60,
         letterSpacing: "0.2px",
         marginBottom: 14
     },
@@ -40,7 +40,6 @@ export default function ThirdSection() {
             <h1 className={classes.mainHeader} >PROJECT</h1>
             <h4 className={classes.subHeader}>Skull n Coin Game</h4>
         </div>
-        <p>Day la 1 cai game rat la dep, tri tue va nhan pham .v.v (mo ta so luoc ve game here)</p>
     </div>
     )
 }

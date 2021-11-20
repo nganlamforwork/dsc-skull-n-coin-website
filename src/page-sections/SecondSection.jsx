@@ -1,11 +1,11 @@
 import React from "react";
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import { Card } from "@material-ui/core";
 import Avatar from '@material-ui/core/Avatar';
 import FacebookIcon from '@material-ui/icons/Facebook';
-import EmailIcon from '@material-ui/icons/Email';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import GitHubIcon from '@material-ui/icons/GitHub';
 
 //avatars
 import tbk from '.././img/tbk.jpg';
@@ -14,7 +14,9 @@ import bnnm from '.././img/bnnm.jpg';
 import hhp from '.././img/hhp.jpg';
 import nhh from '.././img/nhh.jpg';
 import lvnl from '.././img/lvnl.jpg';
-import backgroundImg from '.././img/study.png';
+
+//dsc
+import dsc from '.././img/DSC.png';
 
 const useStyles = makeStyles(theme =>({
     root:{
@@ -23,7 +25,7 @@ const useStyles = makeStyles(theme =>({
         overflowX: "hidden",
         overflowY: "hidden",
         textAlign: "center",
-        paddingTop: "8%"
+        paddingTop: "10%"
     },
     mainHeader:{
         fontSize: 60,
@@ -42,14 +44,17 @@ const useStyles = makeStyles(theme =>({
     },
     cardItem: {
         padding:"12% 5%",
-        borderRadius: 20,
+        borderRadius: 16,
+        border: "1px solid white",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
         transition: "0.4s ease-in-out",
+        backgroundColor:"#181818",
+        color:"white",
         "& p":{
-            margin:10
+            margin:7
         },
         "&:hover":{
             transform: "translateY(-20px)",
@@ -65,31 +70,47 @@ const useStyles = makeStyles(theme =>({
     large: {
         width: theme.spacing(20),
         height: theme.spacing(20),
-        cursor: "pointer",
         "&:hover":{
             transform: "scale(1.1)",
             transition: ".4s ease-in-out",
         }
     },
-    facebookIcon:{
+    icons:{
         fontSize: 40,
-        marginTop:"7%",
+        margin:"30px 10px 0 10px",
         textDecoration: "none",
         transition: ".4s ease-in-out",
-        color: "#181818",
+        color: "white",
         "&:hover": {
             transform: "scale(1.3)",
         },
     },
-    emailIcon:{
-        fontSize: 42,
-        marginTop:"7%",
-        textDecoration: "none",
-        transition: ".4s ease-in-out",
-        color: "#181818",
-        "&:hover": {
-            transform: "scale(1.3)",
+    overview:{
+        display: "flex",
+        margin: "0 5%",
+    },
+    image:{
+        maxWidth: "50%",
+        "& img":{
+            width:"70%"
+        }
+    },
+    content:{
+        marginRight:"5%",
+        maxWidth: "60%",
+        textAlign:"left",
+        "& span":{
+            fontSize: "1.7rem",
+            color:"#757de8"
         },
+        "& h3":{
+            fontSize:60,
+            margin:"3% 0"
+        },
+        "& p":{
+            fontSize:"1.15rem",
+            lineHeight: "1.7rem"
+        }
     }
 }));
 
@@ -97,12 +118,21 @@ export default function SecondSection() {
     const classes = useStyles();
     const theme = useTheme();
     return (
-    <div className={classes.root} id="members">
-        <div className={classes.Header}>
-            <h1 className={classes.mainHeader} >DSC TEAM</h1>
-            <h4 className={classes.subHeader}>Mô tả sơ lược về thông tin cá nhân cũng như các hoạt động công việc của từng thành viên trong nhóm</h4>
+    <div className={classes.root} id="about">
+        <div className={classes.overview}>
+            <div className={classes.image}>
+                <img src={dsc} alt="dsc"/>
+            </div>
+            <div className={classes.content}>
+                <span>ABOUT US</span>
+                <h3 className={classes.title}>DSC TEAM</h3>
+                <p>{description1}</p>
+                <p>{description2}</p>
+                <p>Và sau đây là danh sách 6 thành viên của nhóm với một số thông tin cơ bản!</p>
+            </div>
         </div>
-        <div  className={classes.gridContainer}>
+        <h3 className={classes.mainHeader}>MEMBERS</h3>
+        <div className={classes.gridContainer}>
             <Grid container spacing={6}>
                 {infos.map(info => (
                     <Grid item className={classes.gridItem} key={info.id} xs={12} sm={6} md={4} >
@@ -111,17 +141,20 @@ export default function SecondSection() {
                             <h2> {info.name}</h2>
                             <h3>{info.role}</h3>
                             <p><strong>Student ID:</strong> {info.mssv}</p>
+                            <p><strong>Email:</strong> {info.email}</p>
                             <p><strong>Date of birth:</strong> {info.dateOfBirth}</p>
                             <p><strong>Personality:</strong> {info.personality}</p>
                             <p><strong>Position in project:<br/></strong> {info.task}</p>
                             <div>
-                                <a className={classes.icons} href={info.facebook} target="_blank" >
-                                    <FacebookIcon className={classes.facebookIcon} />
+                                <a href={info.facebook} target="_blank" rel="noreferrer">
+                                    <FacebookIcon className={classes.icons} />
                                 </a>
-                                
-                                {/* <a className={classes.icons} href={`mailto:${info.email}`} target="_blank" >
-                                    <EmailIcon className={classes.emailIcon} />
-                                </a> */}
+                                <a href={info.github} target="_blank" rel="noreferrer">
+                                    <GitHubIcon className={classes.icons} />
+                                </a>
+                                <a href={info.linkedIn} target="_blank" rel="noreferrer">
+                                    <LinkedInIcon className={classes.icons} />
+                                </a>
                             </div>
                         </Card>
                     </Grid>
@@ -145,6 +178,8 @@ const infos=[
         task: "Game Developer",
         personality: "D",
         facebook: "https://facebook.com/trankha1609",
+        linkedIn: "https://www.linkedin.com/in/lam-le-30a39821a/",
+        github: "https://github.com/nganlamforwork",
         email: "tbkha21@clc.fitus.edu.vn"
     },
     {
@@ -157,6 +192,8 @@ const infos=[
         task: "Game Developer",
         personality: "D",
         facebook: "https://facebook.com/tunglam.262",
+        linkedIn: "https://www.linkedin.com/in/lam-le-30a39821a/",
+        github: "https://github.com/nganlamforwork",
         email: "ttlam21@clc.fitus.edu.vn"
     },
     {
@@ -169,6 +206,8 @@ const infos=[
         task: "Video Creator - Web Developer",
         personality: "S",
         facebook: "https://www.facebook.com/profile.php?id=100008058336519",
+        linkedIn: "https://www.linkedin.com/in/lam-le-30a39821a/",
+        github: "https://github.com/nganlamforwork",
         email: "bnnminh21@clc.fitus.edu.vn"
     },
 
@@ -182,6 +221,8 @@ const infos=[
         task: "Game Developer",
         personality: "C",
         facebook: "https://facebook.com/babyne311",
+        linkedIn: "https://www.linkedin.com/in/lam-le-30a39821a/",
+        github: "https://github.com/nganlamforwork",
         email: "hhphat21@clc.fitus.edu.vn"
     },
     {
@@ -194,6 +235,8 @@ const infos=[
         task: "Secretary",
         personality: "D",
         facebook: "https://www.facebook.com/hnhnguyn1910",
+        linkedIn: "https://www.linkedin.com/in/lam-le-30a39821a/",
+        github: "https://github.com/nganlamforwork",
         email: "nhhanh21@clc.fitus.edu.vn"
     },
     {
@@ -206,6 +249,12 @@ const infos=[
         task: "Designer - Web Developer",
         personality: "C",
         facebook: "https://facebook.com/ngan.lam.357",
-        email: "lvnlam21@clc.fitus.edu.vn"
+        linkedIn: "https://www.linkedin.com/in/lam-le-30a39821a/",
+        github: "https://github.com/nganlamforwork",
+        email: "nganlamforwork@gmail.com",
     },
 ]
+
+const description1 = "DSC là nhóm tập hợp gồm 6 thành viên tới từ những tính cách khác nhau, và những tính cách ấy gọi tắt là D, S, C theo khảo sát trắc nghiệm DISC. Tuy tụi mình cũng chỉ mới quen biết nhau khi bước vào môi trường đại học này nhưng tụi mình cũng đã nỗ lực hết sức để đoàn kết, hợp tác và phát triển."
+
+const description2 = "Từng thành viên trong nhóm là 1 mắt xích vô cùng quan trọng để kết nối tất cả mọi người cũng như hợp sức để có thể làm ra sản phẩm này. Sản phẩm này là tâm huyết, là nỗ lực bao ngày qua và tụi mình đã đặt rất nhiều kỳ vọng vào nó. Các bạn hãy cùng nhóm tụi mình đi tới cuối để xem thành quả nhé!"
