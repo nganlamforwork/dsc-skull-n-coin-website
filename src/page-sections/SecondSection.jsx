@@ -4,6 +4,8 @@ import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import { Card } from "@material-ui/core";
 import Avatar from '@material-ui/core/Avatar';
+import FacebookIcon from '@material-ui/icons/Facebook';
+import EmailIcon from '@material-ui/icons/Email';
 
 //avatars
 import tbk from '.././img/tbk.jpg';
@@ -69,33 +71,31 @@ const useStyles = makeStyles(theme =>({
             transition: ".4s ease-in-out",
         }
     },
-    readMoreButton:{
-        marginTop:"10%",
-        backgroundColor: "white !important",
-        color: "#181818 !important",
-        borderRadius: "0px !important",
-        border: "1px solid #181818",
-        padding: "10px 30px !important",
-        textTransform: "none !important",
-        fontSize: "16px !important",
-        fontFamily: " 'Quicksand', sans-serif",
+    facebookIcon:{
+        fontSize: 40,
+        marginTop:"7%",
+        textDecoration: "none",
         transition: ".4s ease-in-out",
+        color: "#181818",
         "&:hover": {
-            backgroundColor: "#181818 !important",
-            color: "white !important",
-        },
-        [theme.breakpoints.down("sm")]: {
-          fontSize: "15px !important",
-          padding: "6px 20px !important",
-          minWidth: "110px !important"
+            transform: "scale(1.3)",
         },
     },
+    emailIcon:{
+        fontSize: 42,
+        marginTop:"7%",
+        textDecoration: "none",
+        transition: ".4s ease-in-out",
+        color: "#181818",
+        "&:hover": {
+            transform: "scale(1.3)",
+        },
+    }
 }));
 
 export default function SecondSection() {
     const classes = useStyles();
     const theme = useTheme();
-
     return (
     <div className={classes.root} id="members">
         <div className={classes.Header}>
@@ -114,7 +114,15 @@ export default function SecondSection() {
                             <p><strong>Date of birth:</strong> {info.dateOfBirth}</p>
                             <p><strong>Personality:</strong> {info.personality}</p>
                             <p><strong>Position in project:<br/></strong> {info.task}</p>
-                            <Button className={classes.readMoreButton}>Read More</Button>
+                            <div>
+                                <a className={classes.icons} href={info.facebook} target="_blank" >
+                                    <FacebookIcon className={classes.facebookIcon} />
+                                </a>
+                                
+                                {/* <a className={classes.icons} href={`mailto:${info.email}`} target="_blank" >
+                                    <EmailIcon className={classes.emailIcon} />
+                                </a> */}
+                            </div>
                         </Card>
                     </Grid>
                 ))}
@@ -135,7 +143,9 @@ const infos=[
         dateOfBirth: "16/09/2003",
         mssv: "21127065",
         task: "Game Developer",
-        personality: "D"
+        personality: "D",
+        facebook: "https://facebook.com/trankha1609",
+        email: "tbkha21@clc.fitus.edu.vn"
     },
     {
         id:2,
@@ -145,7 +155,9 @@ const infos=[
         dateOfBirth: "26/02/2003",
         mssv: "21127337",
         task: "Game Developer",
-        personality: "D"
+        personality: "D",
+        facebook: "https://facebook.com/tunglam.262",
+        email: "ttlam21@clc.fitus.edu.vn"
     },
     {
         id:3,
@@ -155,7 +167,9 @@ const infos=[
         dateOfBirth: "09/11/2003",
         mssv: "21127105",
         task: "Video Creator - Web Developer",
-        personality: "S"
+        personality: "S",
+        facebook: "https://www.facebook.com/profile.php?id=100008058336519",
+        email: "bnnminh21@clc.fitus.edu.vn"
     },
 
     {
@@ -166,7 +180,9 @@ const infos=[
         dateOfBirth: "31/01/2003",
         mssv: "21127130",
         task: "Game Developer",
-        personality: "C"
+        personality: "C",
+        facebook: "https://facebook.com/babyne311",
+        email: "hhphat21@clc.fitus.edu.vn"
     },
     {
         id:5,
@@ -176,7 +192,9 @@ const infos=[
         dateOfBirth: "19/10/2003",
         mssv: "21127503",
         task: "Secretary",
-        personality: "D"
+        personality: "D",
+        facebook: "https://www.facebook.com/hnhnguyn1910",
+        email: "nhhanh21@clc.fitus.edu.vn"
     },
     {
         id:6,
@@ -185,7 +203,9 @@ const infos=[
         name: "Lê Vũ Ngân Lam",
         dateOfBirth: "21/04/2003",
         mssv: "21127334",
-        task: "Designer -Web Developer",
-        personality: "C"
+        task: "Designer - Web Developer",
+        personality: "C",
+        facebook: "https://facebook.com/ngan.lam.357",
+        email: "lvnlam21@clc.fitus.edu.vn"
     },
 ]
