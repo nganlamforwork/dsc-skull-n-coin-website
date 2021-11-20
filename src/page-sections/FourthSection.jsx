@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme =>({
         marginBottom: "3%"
     },
     gallery:{
-        margin: "auto 25%",
+        margin: "auto 20%",
         color: "black"
     }
 }));

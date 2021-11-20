@@ -175,15 +175,15 @@ const navLinks = [
         url: "/#"
     },
     {
-        title: "Members",
-        url: "/#members"
+        title: "About us",
+        url: "/#about"
     },
     {
         title: "Project",
         url: "/#project"
     },
     {
-        title: "Document",
+        title: "Documents",
         url: "/#document"
     },
     {
