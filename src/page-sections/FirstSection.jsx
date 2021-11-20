@@ -69,7 +69,7 @@ export default function FirstSection() {
         </div>
         <h4 className={classes.subHeader}>DSC TEAM FROM 21CLC08 <br/> HO CHI MINH UNIVERISITY OF SCIENCE</h4>
         
-        <a className={classes.links} href="#members">
+        <a className={classes.links} href="#about">
             <Button className={classes.startButton}>Learn More</Button>
         </a>
         <div className={classes.screenImg}><img src={screens} alt="screenImg"/></div>
