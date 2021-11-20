@@ -13,7 +13,7 @@ const useStyles = makeStyles(theme =>({
         paddingBottom: "10%"
     },
     mainHeader:{
-        fontSize: 52,
+        fontSize: 60,
         letterSpacing: "0.2px",
         marginBottom: 14
     },
@@ -37,8 +37,11 @@ export default function FifthSection() {
     return (
     <div className={classes.root} id="document">
         <div className={classes.Header}>
-            <h1 className={classes.mainHeader} >DOCUMENT</h1>
-            <h4 className={classes.subHeader}>Biên bản họp nhóm, phân công,...</h4>
+            <h1 className={classes.mainHeader} >DOCUMENTS</h1>
+            <h4 className={classes.subHeader}>
+                Sau đây là các hồ sơ, tài liệu của nhóm trong quá trình
+                thực hiện dự án, bao gồm: bảng kế hoạch đồ án, biên bản họp nhóm,...
+            </h4>
         </div>
         <div className={classes.gallery}>
             <DocumentTab />

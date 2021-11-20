@@ -106,22 +106,22 @@ export default function DocumentTab() {
 const gallery = [
     {
         id: 0,
-        title: "Biên bản họp lần 1",
+        title: "Bảng kế hoạch đô án",
         src: meetingMinutes,
     },
     {
         id: 1,
-        title: "Biên bản họp lần 2",
+        title: "Biên bản họp lần 1",
         src: meetingMinutes,
     },
     {
         id: 2,
-        title: "Biên bản họp lần 3",
+        title: "Biên bản họp lần 2",
         src: meetingMinutes,
     },
     {
         id: 3,
-        title: "Biên bản họp lần 4",
+        title: "Biên bản họp lần 3",
         src: meetingMinutes,
     },
 ]
