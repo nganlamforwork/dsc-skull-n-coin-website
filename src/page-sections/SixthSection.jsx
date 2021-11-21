@@ -1,5 +1,5 @@
 import React from "react";
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles} from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import { Card } from "@material-ui/core";
@@ -98,7 +98,6 @@ const useStyles = makeStyles(theme =>({
 
 export default function SixthSection() {
     const classes = useStyles();
-    const theme = useTheme();
 
     return (
     <div className={classes.root} id="contact">
@@ -108,7 +107,7 @@ export default function SixthSection() {
                 <Grid item className={classes.gridItem} xs={12} md={4} >
                     <Card className={classes.cardItem}>
                         <div className={classes.icon}>
-                            <img src="https://img.icons8.com/bubbles/100/000000/phone.png" />
+                            <img src="https://img.icons8.com/bubbles/100/000000/phone.png" alt="icon"/>
                         </div>
                         <div className={classes.content}>
                             <h4>Phone numbers</h4>
@@ -121,7 +120,7 @@ export default function SixthSection() {
                 <Grid item className={classes.gridItem} xs={12} md={4} >
                     <Card className={classes.cardItem}>
                         <div className={classes.icon}>
-                            <img src="https://img.icons8.com/bubbles/100/000000/new-post.png" />
+                            <img src="https://img.icons8.com/bubbles/100/000000/new-post.png" alt="icon"/>
                         </div>
                         <div className={classes.content}>
                             <h4>Emails</h4>
@@ -133,7 +132,7 @@ export default function SixthSection() {
                 <Grid item className={classes.gridItem} xs={12} md={4} >
                     <Card className={classes.cardItem}>
                         <div className={classes.icon}>
-                            <img src="https://img.icons8.com/bubbles/100/000000/map-marker.png" />
+                            <img src="https://img.icons8.com/bubbles/100/000000/map-marker.png" alt="icon"/>
                         </div>
                         <div className={classes.content}>
                             <h4>Adress</h4>

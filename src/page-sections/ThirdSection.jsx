@@ -1,6 +1,8 @@
 import React from "react";
 import { makeStyles} from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
+import Button from '@material-ui/core/Button';
+import FourthSection from './FourthSection';
 import DoneOutlineIcon from '@material-ui/icons/DoneOutline';
 import thumbnail from '.././img/thumbnail-vertical.png';
 
@@ -65,14 +67,87 @@ const useStyles = makeStyles(theme =>({
         alignItems: "center",
         fontSize: 14,
         "& h2":{
-            margin: "0 0 0 18px"
+            margin: "0 0 0 18px",
+            [theme.breakpoints.down("sm")]: {
+                fontSize:18,
+                margin: "0 0 0 10px",
+            },
         }
     },
     gridItem:{
         [theme.breakpoints.down("sm")]: {
             textAlign: "left"
         },
-    }
+        "& p": {
+            [theme.breakpoints.down("sm")]: {
+                fontSize:14
+            },
+        }
+    },
+    mainHeader:{
+        fontSize: 52,
+        letterSpacing: "0.2px",
+        marginBottom: "3%",
+        [theme.breakpoints.down("xs")]: {
+            fontSize:40
+        },
+    },
+    subHeader:{
+        fontSize: 20,
+        lineHeight: "30px",
+        fontWeight: "lighter",
+        margin: "0 30%",
+        marginBottom: "3%",
+        [theme.breakpoints.down("sm")]: {
+            margin: "5% 20%",
+        },
+        [theme.breakpoints.down("xs")]: {
+            margin: "5% 10%",
+        },
+    },
+    videoContainer:{
+        position: "relative",
+        paddingBottom:"56.25%",
+        height:0,
+        "& iframe":{
+            position: "absolute",
+            top:0,
+            left:0,
+        }
+    },
+    setFixedHeight:{
+        margin:"0 20%",
+        [theme.breakpoints.down("sm")]: {
+            margin: "0 6%",
+        },
+        [theme.breakpoints.down("xs")]: {
+            margin: "0 3%",
+        },
+    },
+    download:{
+        marginTop:"5%"
+    },
+    links:{
+        textDecoration: "none"
+    },
+    startButton:{
+        backgroundColor: "#181818 !important",
+        color: "white !important",
+        borderRadius: "0px !important",
+        border: "1px solid white",
+        padding: "14px 40px !important",
+        textTransform: "none !important",
+        fontSize: "18px !important",
+        fontFamily: " 'Quicksand', sans-serif",
+        "&:hover": {
+            backgroundColor: "white !important",
+            color: "#181818 !important",
+        },
+        [theme.breakpoints.down("sm")]: {
+          fontSize: "15px !important",
+          padding: "8px 30px !important",
+        },
+    },
 }));
 
 export default function ThirdSection() {
@@ -101,6 +176,35 @@ export default function ThirdSection() {
                 </Grid>
             </div>
         </div>
+        <div className={classes.trailer}>
+            <h1 className={classes.mainHeader} >TRAILER</h1>
+            <div className={classes.setFixedHeight}>
+                <div className={classes.videoContainer}>
+                    <iframe 
+                        width="100%" height="100%"
+                        src="https://www.youtube.com/embed/QCl89rjoxRY" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+        <FourthSection />
+        <div className={classes.download}>
+            <h1 className={classes.mainHeader} >DOWNLOAD OUR GAME</h1>
+            <h4 className={classes.subHeader}>
+                Click the button below to download the zip file. Unzip it and run exe file. Now, you can play our game!
+            </h4>
+            <a 
+                className={classes.links} 
+                href="https://drive.google.com/file/d/1ZfBBUFIXRVNYV-ovKizHdvDUjYVh_J1E/view?usp=sharing"
+                target="_blank" rel="noreferrer"
+            >
+                <Button className={classes.startButton}>Download</Button>
+            </a>
+        </div>
     </div>
     )
 }
@@ -108,22 +212,22 @@ export default function ThirdSection() {
 const infos = [
     {
         id:1,
-        title: "Thể loại",
-        description: "Game lật bài, trí nhớ, đua thời gian"
+        title: "Category",
+        description: "Flipped Card, Memory Card, Speed run,…"
     },
     {
         id:2,
-        title: "Công cụ phát triển",
-        description: "Game Maker Studio"
+        title: "Development tool",
+        description: "Game Maker Studio 2"
     },
     {
         id:3,
-        title: "Thời gian phát hành",
-        description: "Ver1 - 11/2021"
+        title: "Date Release",
+        description: "Version 1 - 11/2021"
     },
     {
         id:4,
-        title: "Yêu cầu",
-        description: "Trực tuyến, sử dụng trình duyệt Opera"
+        title: "Requirement",
+        description: "Offline"
     },
 ]

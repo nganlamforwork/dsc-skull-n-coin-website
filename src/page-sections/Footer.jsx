@@ -1,5 +1,5 @@
 import React from "react";
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(theme =>({
     root:{
@@ -12,7 +12,11 @@ const useStyles = makeStyles(theme =>({
         background: "black"
     },
     copyright:{
-        marginTop:"6%"
+        marginTop:"6% !important",
+        [theme.breakpoints.down("sm")]: {
+            marginTop: "10% !important",
+            fontSize: 12
+        },
     },
     Header:{
         "& h3":{
@@ -22,7 +26,8 @@ const useStyles = makeStyles(theme =>({
         },
         "& p":{
             [theme.breakpoints.down("sm")]: {
-                margin: "auto 5%"
+                margin: "auto 5%",
+                fontSize: 16
             },
         }
     }
@@ -30,7 +35,6 @@ const useStyles = makeStyles(theme =>({
 
 export default function FourthSection() {
     const classes = useStyles();
-    const theme = useTheme();
 
     return (
     <div className={classes.root} id="document">

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import clsx from 'clsx';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles} from '@material-ui/core/styles';
 
 import Button from '@material-ui/core/Button';
 import Hidden from '@material-ui/core/Hidden';
@@ -37,6 +37,8 @@ const useStyles = makeStyles(theme =>({
         alignItems: "center"
     },
     logo:{
+        textDecoration:"none",
+        color:"white",
         "& h1":{
             fontWeight: 700
         }
@@ -82,13 +84,12 @@ const useStyles = makeStyles(theme =>({
     linkDrawer:{
         textDecoration: "none",
         color: "white",
-        fontSize: 15
+        fontSize: 18
     }
 }));
 
 export default function Header() {
     const classes = useStyles();
-    const theme = useTheme();
     const [open, setOpen] = React.useState(false);
     const [show,setShow] = React.useState(true);
     
@@ -117,9 +118,9 @@ export default function Header() {
     return (
     <div className={`${classes.root} ${show && 'active'}`}>
         <div className={classes.navbarContainer}>
-            <div className={classes.logo}>
+            <a className={classes.logo} href="#">
                 <h1>D<span className={classes.red}>S</span>C</h1>
-            </div>
+            </a>
             <Hidden only={['xs', 'sm']}>
                 <div className={classes.navbarContent}>
                     <div className={classes.links}>
@@ -138,7 +139,7 @@ export default function Header() {
                     className={clsx(open && classes.hide)}
                     style = {{padding: 0}}
                 >
-                    <MenuIcon style = {{color: "white", fontSize: 28}}/>
+                    <MenuIcon style = {{color: "white", fontSize: 28, marginRight: "5%"}}/>
                 </IconButton>
             </Hidden>     
         </div>  
@@ -153,7 +154,7 @@ export default function Header() {
         >
             <div className={classes.drawerHeader}>
                 <IconButton onClick={handleDrawerClose}>
-                    <ClearIcon style = {{color: "white", fontSize: 26}}/>
+                    <ClearIcon style = {{color: "white", fontSize: 30}}/>
                 </IconButton>
             </div>
             <List>

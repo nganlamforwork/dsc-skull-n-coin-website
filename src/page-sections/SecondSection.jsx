@@ -1,5 +1,5 @@
 import React from "react";
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles} from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import { Card } from "@material-ui/core";
 import Avatar from '@material-ui/core/Avatar';
@@ -154,7 +154,6 @@ const useStyles = makeStyles(theme =>({
 
 export default function SecondSection() {
     const classes = useStyles();
-    const theme = useTheme();
     return (
     <div className={classes.root} id="about">
         <div className={classes.overview}>
@@ -166,7 +165,7 @@ export default function SecondSection() {
                 <h3 className={classes.title}>DSC TEAM</h3>
                 <p>{description1}</p>
                 <p className={classes.hiddenRes}>{description2}</p>
-                <p>Và sau đây là danh sách 6 thành viên của nhóm với một số thông tin cơ bản!</p>
+                <p>And here is a list of 6 members of the group with some background information!</p>
             </div>
         </div>
         <h3 className={classes.mainHeader}>MEMBERS</h3>
@@ -209,7 +208,7 @@ const infos=[
     {
         id:1,
         source: tbk,
-        name: "Trần Bình Kha",
+        name: "Tran Binh Kha",
         role: "Leader",
         dateOfBirth: "16/09/2003",
         mssv: "21127065",
@@ -224,7 +223,7 @@ const infos=[
         id:2,
         source: ttl,
         role: "Member",
-        name: "Trần Tùng Lâm",
+        name: "Tran Tung Lam",
         dateOfBirth: "26/02/2003",
         mssv: "21127337",
         task: "Game Developer",
@@ -238,7 +237,7 @@ const infos=[
         id:3,
         source: bnnm,
         role: "Member",
-        name: "Bùi Nguyễn Nhật Minh",
+        name: "Bui Nguyen Nhat Minh",
         dateOfBirth: "09/11/2003",
         mssv: "21127105",
         task: "Video Creator - Web Developer",
@@ -253,7 +252,7 @@ const infos=[
         id:4,
         source: hhp,
         role: "Member",
-        name: "Huỳnh Hiệp Phát",
+        name: "Huynh Hiep Phat",
         dateOfBirth: "31/01/2003",
         mssv: "21127130",
         task: "Game Developer",
@@ -267,7 +266,7 @@ const infos=[
         id:5,
         source: nhh,
         role: "Member",
-        name: "Nguyễn Hồng Hạnh",
+        name: "Nguyen Hong Hanh",
         dateOfBirth: "19/10/2003",
         mssv: "21127503",
         task: "Secretary",
@@ -281,7 +280,7 @@ const infos=[
         id:6,
         source: lvnl,
         role: "Member",
-        name: "Lê Vũ Ngân Lam",
+        name: "Le Vu Ngan Lam",
         dateOfBirth: "21/04/2003",
         mssv: "21127334",
         task: "Designer - Web Developer",
@@ -293,6 +292,6 @@ const infos=[
     },
 ]
 
-const description1 = "DSC là nhóm tập hợp gồm 6 thành viên tới từ những tính cách khác nhau, và những tính cách ấy gọi tắt là D, S, C theo khảo sát trắc nghiệm DISC. Tuy tụi mình cũng chỉ mới quen biết nhau khi bước vào môi trường đại học này nhưng tụi mình cũng đã nỗ lực hết sức để đoàn kết, hợp tác và phát triển."
+const description1 = "DSC is a group of 6 members from different personalities, and these personalities are called D, S, C according to the DISC multiple choice survey. Although we have only just known each other when entering this new University environment, we have also tried our best to unite, cooperate and develop."
 
-const description2 = "Từng thành viên trong nhóm là 1 mắt xích vô cùng quan trọng để kết nối tất cả mọi người cũng như hợp sức để có thể làm ra sản phẩm này. Sản phẩm này là tâm huyết, là nỗ lực bao ngày qua và tụi mình đã đặt rất nhiều kỳ vọng vào nó. Các bạn hãy cùng nhóm tụi mình đi tới cuối để xem thành quả nhé!"
+const description2 = "Each team member is an extremely important link to connect everyone as well as work together to be able to make this product. This product is the passion and effort of the past few days and we have put a lot of expectations on it. Please get along with our team to the end to see the results!"
