@@ -82,7 +82,7 @@ const useStyles = makeStyles(theme =>({
     linkDrawer:{
         textDecoration: "none",
         color: "white",
-        fontSize: 15
+        fontSize: 18
     }
 }));
 
@@ -138,7 +138,7 @@ export default function Header() {
                     className={clsx(open && classes.hide)}
                     style = {{padding: 0}}
                 >
-                    <MenuIcon style = {{color: "white", fontSize: 28}}/>
+                    <MenuIcon style = {{color: "white", fontSize: 28, marginRight: "5%"}}/>
                 </IconButton>
             </Hidden>     
         </div>  
@@ -153,7 +153,7 @@ export default function Header() {
         >
             <div className={classes.drawerHeader}>
                 <IconButton onClick={handleDrawerClose}>
-                    <ClearIcon style = {{color: "white", fontSize: 26}}/>
+                    <ClearIcon style = {{color: "white", fontSize: 30}}/>
                 </IconButton>
             </div>
             <List>

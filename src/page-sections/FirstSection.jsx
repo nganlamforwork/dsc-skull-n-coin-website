@@ -30,14 +30,19 @@ const useStyles = makeStyles(theme =>({
         "& img":{
             width:"60%",
             [theme.breakpoints.down("sm")]: {
-                width: "70%",
+                width: "90%",
             },
         }
     },
     subHeader:{
         fontSize: 24,
         lineHeight: "40px",
-        fontWeight: 500
+        fontWeight: 500,
+        [theme.breakpoints.down("xs")]: {
+            fontSize: 20,
+            lineHeight: "30px",
+            margin: "4% 5%"
+        },
     },
     startButton:{
         marginTop:"3%",

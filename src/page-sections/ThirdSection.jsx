@@ -65,13 +65,21 @@ const useStyles = makeStyles(theme =>({
         alignItems: "center",
         fontSize: 14,
         "& h2":{
-            margin: "0 0 0 18px"
+            margin: "0 0 0 18px",
+            [theme.breakpoints.down("sm")]: {
+                fontSize:12
+            },
         }
     },
     gridItem:{
         [theme.breakpoints.down("sm")]: {
             textAlign: "left"
         },
+        "& p": {
+            [theme.breakpoints.down("sm")]: {
+                fontSize:11
+            },
+        }
     }
 }));
 
@@ -108,22 +116,22 @@ export default function ThirdSection() {
 const infos = [
     {
         id:1,
-        title: "Thể loại",
-        description: "Game lật bài, trí nhớ, đua thời gian"
+        title: "Category",
+        description: "Flipped Card, Memory Card, Speed run,…"
     },
     {
         id:2,
-        title: "Công cụ phát triển",
-        description: "Game Maker Studio"
+        title: "Development tool",
+        description: "Game Maker Studio 2"
     },
     {
         id:3,
-        title: "Thời gian phát hành",
-        description: "Ver1 - 11/2021"
+        title: "Date Release",
+        description: "Version 1 - 11/2021"
     },
     {
         id:4,
-        title: "Yêu cầu",
-        description: "Trực tuyến, sử dụng trình duyệt Opera"
+        title: "Requirement",
+        description: "Online, Browser: Opera"
     },
 ]
