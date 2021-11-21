@@ -10,14 +10,14 @@ const useStyles = makeStyles(theme =>({
         overflowY: "hidden",
         textAlign: "center",
         paddingTop: "3%",
-        [theme.breakpoints.down("xs")]: {
-            paddingTop: "25%",
-        },
     },
     mainHeader:{
         fontSize: 52,
         letterSpacing: "0.2px",
-        marginBottom: "3%"
+        marginBottom: "3%",
+        [theme.breakpoints.down("xs")]: {
+            fontSize:40
+        },
     },
     gallery:{
         margin: "auto 20%",

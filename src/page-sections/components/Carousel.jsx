@@ -28,10 +28,16 @@ const useStyles = makeStyles(theme =>({
         height:50,
         "&:hover":{
             color:"#757de8"
-        }
+        },
+        [theme.breakpoints.down("xs")]: {
+            display: "none"
+        },
     },
     imgItem: {
-        padding: "0 10% 5% 10%"
+        padding: "0 10% 5% 10%",
+        [theme.breakpoints.down("xs")]: {
+            padding: "0 0 10% 0"
+        },
     },
     icon:{
         fontSize: 30

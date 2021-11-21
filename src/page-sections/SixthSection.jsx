@@ -14,13 +14,16 @@ const useStyles = makeStyles(theme =>({
         paddingTop: "8%",
         paddingBottom: "10%",
         [theme.breakpoints.down("xs")]: {
-            paddingTop: "20%",
+            paddingTop: "18%",
         },
     },
     mainHeader:{
         fontSize: 60,
         letterSpacing: "0.2px",
-        marginBottom: 14
+        marginBottom: 14,
+        [theme.breakpoints.down("xs")]: {
+            fontSize:40
+        },
     },
     gridContainer:{
         margin:"5% 10%",
@@ -101,7 +104,7 @@ export default function SixthSection() {
     <div className={classes.root} id="contact">
         <h1 className={classes.mainHeader} >CONTACT US</h1>
         <div  className={classes.gridContainer}>
-            <Grid container spacing={6}>
+            <Grid container spacing={5}>
                 <Grid item className={classes.gridItem} xs={12} md={4} >
                     <Card className={classes.cardItem}>
                         <div className={classes.icon}>

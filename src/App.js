@@ -4,7 +4,7 @@ import Header from './page-sections/Header';
 import SecondSection from './page-sections/SecondSection';
 import ThirdSection from './page-sections/ThirdSection';
 import FourthSection from './page-sections/FourthSection';
-import FifthSection from './page-sections/FifthSection';
+/* import FifthSection from './page-sections/FifthSection'; */
 import Footer from './page-sections/Footer';
 import SixthSection from './page-sections/SixthSection';
 
@@ -16,7 +16,7 @@ function App() {
       <SecondSection />
       <ThirdSection />
       <FourthSection />
-      <FifthSection />
+      {/* <FifthSection /> */}
       <SixthSection />
       <Footer />
     </div>
