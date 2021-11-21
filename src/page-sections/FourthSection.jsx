@@ -1,5 +1,5 @@
 import React from "react";
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles} from '@material-ui/core/styles';
 import DemoCarousel from './components/Carousel'
 
 const useStyles = makeStyles(theme =>({
@@ -33,8 +33,6 @@ const useStyles = makeStyles(theme =>({
 
 export default function FourthSection() {
     const classes = useStyles();
-    const theme = useTheme();
-
     return (
     <div className={classes.root}>
         <h1 className={classes.mainHeader} >TUTORIAL</h1>

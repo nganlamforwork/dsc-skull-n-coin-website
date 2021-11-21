@@ -1,5 +1,5 @@
 import React from "react";
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import screens from ".././img/screens.png";
 import title from ".././img/title.svg";
@@ -76,7 +76,6 @@ const useStyles = makeStyles(theme =>({
 
 export default function FirstSection() {
     const classes = useStyles();
-    const theme = useTheme();
 
     return (
     <div className={classes.root}>

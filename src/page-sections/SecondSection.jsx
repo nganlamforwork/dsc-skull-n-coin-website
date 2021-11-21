@@ -1,5 +1,5 @@
 import React from "react";
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles} from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import { Card } from "@material-ui/core";
 import Avatar from '@material-ui/core/Avatar';
@@ -154,7 +154,6 @@ const useStyles = makeStyles(theme =>({
 
 export default function SecondSection() {
     const classes = useStyles();
-    const theme = useTheme();
     return (
     <div className={classes.root} id="about">
         <div className={classes.overview}>
