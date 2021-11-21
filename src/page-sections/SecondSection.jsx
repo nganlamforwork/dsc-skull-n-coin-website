@@ -37,16 +37,10 @@ const useStyles = makeStyles(theme =>({
         fontSize: 60,
         letterSpacing: "0.2px",
         marginBottom: 14,
-        [theme.breakpoints.down("sm")]: {
-            marginTop:20
+        [theme.breakpoints.down("xs")]: {
+            marginTop:20,
+            fontSize:40
         },
-    },
-    subHeader:{
-        fontSize: 20,
-        lineHeight: "30px",
-        fontWeight: "lighter",
-        margin: "0 30%",
-        marginBottom: "6%"
     },
     gridContainer:{
         margin: "50px 10%",
@@ -138,7 +132,9 @@ const useStyles = makeStyles(theme =>({
         "& h3":{
             fontSize:60,
             margin:"3% 0",
-            
+            [theme.breakpoints.down("xs")]: {
+                fontSize:40
+            },
         },
         "& p":{
             fontSize:"1.15rem",
@@ -147,6 +143,11 @@ const useStyles = makeStyles(theme =>({
                 fontSize:"1rem",
                 lineHeight: "1.2rem",
             },
+        },
+    },
+    hiddenRes:{
+        [theme.breakpoints.down("md")]: {
+            display: "none"
         },
     }
 }));
@@ -164,7 +165,7 @@ export default function SecondSection() {
                 <span>ABOUT US</span>
                 <h3 className={classes.title}>DSC TEAM</h3>
                 <p>{description1}</p>
-                <p>{description2}</p>
+                <p className={classes.hiddenRes}>{description2}</p>
                 <p>Và sau đây là danh sách 6 thành viên của nhóm với một số thông tin cơ bản!</p>
             </div>
         </div>
@@ -172,7 +173,7 @@ export default function SecondSection() {
         <div className={classes.gridContainer}>
             <Grid container spacing={6}>
                 {infos.map(info => (
-                    <Grid item className={classes.gridItem} key={info.id} xs={12} sm={6} md={4} >
+                    <Grid item className={classes.gridItem} key={info.id} xs={12} sm={6} md={6} lg={4} >
                         <Card className={classes.cardItem}>
                             <Avatar alt="avatar" src={info.source} className={classes.large} />
                             <h2> {info.name}</h2>
@@ -215,8 +216,8 @@ const infos=[
         task: "Game Developer",
         personality: "D",
         facebook: "https://facebook.com/trankha1609",
-        linkedIn: "https://www.linkedin.com/in/lam-le-30a39821a/",
-        github: "https://github.com/nganlamforwork",
+        linkedIn: "https://www.linkedin.com/in/trkha16/",
+        github: "https://github.com/trkha16",
         email: "tbkha21@clc.fitus.edu.vn"
     },
     {
@@ -229,8 +230,8 @@ const infos=[
         task: "Game Developer",
         personality: "D",
         facebook: "https://facebook.com/tunglam.262",
-        linkedIn: "https://www.linkedin.com/in/lam-le-30a39821a/",
-        github: "https://github.com/nganlamforwork",
+        linkedIn: "https://www.linkedin.com/in/louis-tr%E1%BA%A7n-a4255b217/",
+        github: "https://github.com/Louis2602",
         email: "ttlam21@clc.fitus.edu.vn"
     },
     {
@@ -243,8 +244,8 @@ const infos=[
         task: "Video Creator - Web Developer",
         personality: "S",
         facebook: "https://www.facebook.com/profile.php?id=100008058336519",
-        linkedIn: "https://www.linkedin.com/in/lam-le-30a39821a/",
-        github: "https://github.com/nganlamforwork",
+        linkedIn: "https://www.linkedin.com/in/nhat-minh-bui-nguyen-38bb17216/",
+        github: "https://github.com/buiminh-afk",
         email: "bnnminh21@clc.fitus.edu.vn"
     },
 
@@ -258,8 +259,8 @@ const infos=[
         task: "Game Developer",
         personality: "C",
         facebook: "https://facebook.com/babyne311",
-        linkedIn: "https://www.linkedin.com/in/lam-le-30a39821a/",
-        github: "https://github.com/nganlamforwork",
+        linkedIn: "https://www.linkedin.com/in/ph%C3%A1t-hu%E1%BB%B3nh-282545226/",
+        github: "https://github.com/LazyBoy311",
         email: "hhphat21@clc.fitus.edu.vn"
     },
     {

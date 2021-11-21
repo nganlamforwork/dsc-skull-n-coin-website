@@ -47,7 +47,10 @@ const useStyles = makeStyles(theme =>({
         },
         "& h1":{
             fontSize:60,
-            margin:"3% 0"
+            margin:"3% 0",
+            [theme.breakpoints.down("xs")]: {
+                fontSize:40
+            },
         },
         "& h2":{
             margin:"3% 0 7% 0"

@@ -13,6 +13,18 @@ const useStyles = makeStyles(theme =>({
     },
     copyright:{
         marginTop:"6%"
+    },
+    Header:{
+        "& h3":{
+            [theme.breakpoints.down("sm")]: {
+                margin: "auto 5%"
+            },
+        },
+        "& p":{
+            [theme.breakpoints.down("sm")]: {
+                margin: "auto 5%"
+            },
+        }
     }
 }));
 
@@ -22,7 +34,7 @@ export default function FourthSection() {
 
     return (
     <div className={classes.root} id="document">
-        <div className={classes.Headechr}>
+        <div className={classes.Header}>
             <h1>DSC TEAM</h1>
             <h3>21CLC08 - Ho Chi Minh University Of Science</h3>
             <p className={classes.copyright}>Copyright &copy; 2021 DSC. All rights reserved</p>
