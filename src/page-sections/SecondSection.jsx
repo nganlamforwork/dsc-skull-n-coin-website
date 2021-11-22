@@ -272,8 +272,8 @@ const infos=[
         task: "Secretary",
         personality: "D",
         facebook: "https://www.facebook.com/hnhnguyn1910",
-        linkedIn: "https://www.linkedin.com/in/lam-le-30a39821a/",
-        github: "https://github.com/nganlamforwork",
+        linkedIn: "https://www.linkedin.com/in/hnhnguyn1910/",
+        github: "https://github.com/hnhnguyn",
         email: "nhhanh21@clc.fitus.edu.vn"
     },
     {
@@ -286,9 +286,9 @@ const infos=[
         task: "Designer - Web Developer",
         personality: "C",
         facebook: "https://facebook.com/ngan.lam.357",
-        linkedIn: "https://www.linkedin.com/in/lam-le-30a39821a/",
+        linkedIn: "https://www.linkedin.com/in/nganlamlevu/",
         github: "https://github.com/nganlamforwork",
-        email: "nganlamforwork@gmail.com",
+        email: "lvnlam21@clc.fitus.edu.vn",
     },
 ]
 
