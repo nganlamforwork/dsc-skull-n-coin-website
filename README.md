@@ -1,11 +1,12 @@
-#This is the website made for Skull n Coin game
+# This is the website made for "Skull n Coin" game #
 
 Website link: https://skullncoindsc.netlify.app/
 
 Group name: DSC
 Ho Chi Minh University Of Science
 
-I use ReactJS to build this project. You can clone my project by using ### `git clone https://github.com/nganlamforwork/dsc-skull-n-coin-website.git` in the command line
+I use ReactJS to build this project. You can clone my project by using:
+### `git clone https://github.com/nganlamforwork/dsc-skull-n-coin-website.git` in the command line
 
 ## After clone my project, you can run:
 
