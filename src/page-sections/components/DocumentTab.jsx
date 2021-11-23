@@ -10,6 +10,7 @@ import Box from '@material-ui/core/Box';
 import projectPlan from '../.././documents/Project Plan.pdf';
 import meeting1 from '../.././documents/Meeting Minutes_1.pdf';
 import meeting2 from '../.././documents/Meeting Minutes_2.pdf';
+import meeting3 from '../.././documents/Meeting Minutes_3.pdf';
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -108,27 +109,22 @@ export default function DocumentTab() {
 const gallery = [
     {
         id: 0,
-        title: "Bảng kế hoạch đô án",
+        title: "PROJECT PLAN",
         src: projectPlan,
     },
     {
         id: 1,
-        title: "Biên bản họp lần 1",
+        title: "MEETING MINUTES NO.1 (WEEK 1)",
         src: meeting1,
     },
     {
         id: 2,
-        title: "Biên bản họp lần 2",
+        title: "MEETING MINUTES NO.2 (WEEK 2)",
         src: meeting2,
     },
     {
         id: 3,
-        title: "Biên bản họp lần 3",
-        src: meeting2,
-    },
-    {
-        id: 4,
-        title: "Biên bản họp lần 4",
-        src: meeting2,
+        title: "MEETING MINUTES NO.3 (WEEK 2)",
+        src: meeting3,
     },
 ]
