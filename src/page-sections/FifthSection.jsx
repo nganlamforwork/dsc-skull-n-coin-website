@@ -54,6 +54,9 @@ export default function FifthSection() {
     <div className={classes.root} id="document">
         <div className={classes.Header}>
             <h1 className={classes.mainHeader} >DOCUMENTS</h1>
+            <h4 className={classes.subHeader}>
+                The following are the group's files and documents during the project implementation, including: project plan table, group meeting minutes,...
+            </h4>
         </div>
         <div className={classes.gallery}>
             <DocumentTab />
