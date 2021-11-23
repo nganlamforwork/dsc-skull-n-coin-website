@@ -54,10 +54,6 @@ export default function FifthSection() {
     <div className={classes.root} id="document">
         <div className={classes.Header}>
             <h1 className={classes.mainHeader} >DOCUMENTS</h1>
-            <h4 className={classes.subHeader}>
-                Sau đây là các hồ sơ, tài liệu của nhóm trong quá trình
-                thực hiện dự án, bao gồm: bảng kế hoạch đồ án, biên bản họp nhóm,...
-            </h4>
         </div>
         <div className={classes.gallery}>
             <DocumentTab />
