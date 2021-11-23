@@ -17,7 +17,10 @@ const useStyles = makeStyles(theme =>({
     mainHeader:{
         fontSize: 60,
         letterSpacing: "0.2px",
-        marginBottom: 14
+        marginBottom: 14,
+        [theme.breakpoints.down("xs")]: {
+            fontSize:40
+        },
     },
     subHeader:{
         fontSize: 20,
