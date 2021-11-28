@@ -41,7 +41,7 @@ export default function FourthSection() {
         <div className={classes.Header}>
             <h1>DSC TEAM</h1>
             <h3>21CLC08 - Ho Chi Minh University Of Science</h3>
-            <p className={classes.copyright}>Copyright &copy; 2021 Le Vu Ngan Lam. All rights reserved</p>
+            <p className={classes.copyright}>Copyright &copy; 2021 DSC. All rights reserved</p>
         </div>
     </div>
     )
